@@ -9,7 +9,7 @@
 # documentation.
 
 # Setting some startup stuff
-riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+# riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn ~/.config/waybar/tag-states.sh
 riverctl spawn "river-tag-overlay --background-colour 0x30374f --square-active-occupied-colour 0x918acf --square-active-background-colour 0x56527a --square-active-border-colour 0x56527a"
 riverctl spawn ~/.config/river/swaybg.sh
