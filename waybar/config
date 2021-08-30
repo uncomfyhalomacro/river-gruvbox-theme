@@ -1,0 +1,144 @@
+{
+   "layer": "bottom",
+	"height": 32,
+	"width": 1200,
+    "position": "top",
+    "modules-left": [
+        "custom/where",
+        "custom/river-tag-1",
+        "custom/river-tag-2",
+        "custom/river-tag-3",
+        "custom/river-tag-4",
+        "custom/river-tag-5",
+        "custom/river-tag-6",
+        "custom/river-tag-7",
+        "custom/river-tag-8",
+        "custom/river-tag-9"
+    ],
+	"modules-center": ["custom/title", "custom/middle", "custom/media"],
+    "modules-right": ["backlight", "network", "battery", "pulseaudio", "tray", "clock"],
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%a %b %d}",
+        "tooltip": true
+    },
+
+    "custom/title": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/get_title.sh",
+        "interval": 1,
+	    "min-length": 3,
+	    "max-length": 50
+    },
+
+    "custom/middle": {
+        "format": "   ",
+    },
+
+    "custom/where": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/where.sh",
+        "interval": 1
+    },
+
+    "custom/river-tag-1": {
+        "format": "ﳐ",
+        "on-click": "riverctl set-focused-tags 1",
+        "tooltip": false
+    },
+    "custom/river-tag-2": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 2",
+        "tooltip": false
+    },
+    "custom/river-tag-3": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 4",
+        "tooltip": false
+    },
+    "custom/river-tag-4": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 8",
+        "tooltip": false
+    },
+    "custom/river-tag-5": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 16",
+        "tooltip": false
+    },
+    "custom/river-tag-6": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 32",
+        "tooltip": false
+    },
+    "custom/river-tag-7": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 64",
+        "tooltip": false
+    },
+    "custom/river-tag-8": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 128",
+        "tooltip": false
+    },
+    "custom/river-tag-9": {
+        "format": "",
+        "on-click": "riverctl set-focused-tags 256",
+        "tooltip": false
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "🌐{essid}",
+        "format-ethernet": "🌐{ifname}",
+        "format-disconnected": "😨 Network unavailable",
+        "tooltip-format-wifi": "{signalStrength}%",
+        "max-length": 30
+    },
+    "custom/media": {
+        "format": " {}",
+        "exec": "$HOME/.config/waybar/get_media.sh",
+        "on-click": "$HOME/.config/waybar/play_pause_media.sh",
+	    "min-length": 3,
+	    "max-length": 50,
+		"interval": 1
+    },
+    "custom/keyboard": {
+        "format": " {}",
+        "interval": 1,
+        "exec": "$HOME/.config/waybar/get_kbdlayout.sh"
+    },
+	"backlight": {
+        "format-icons": ["🔅","🔆"],
+        "on-scroll-up": "xbacklight -inc 1",
+        "on-scroll-down": "xbacklight -dec 1",
+		"format": "{icon}{percent}%"
+	},
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{icon}{volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "🎧",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "👀",
+            "deactivated": "🙈"
+        }
+    }
+}
+

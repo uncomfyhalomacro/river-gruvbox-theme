@@ -1,0 +1,105 @@
+* {
+  font-size: 13px;
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font";
+  min-height: 0px;
+}
+
+window#waybar {
+    background: #1d2021;
+    color:  #d4be98;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+#custom-where {
+    font-size: 18px;
+    color: #3c3836;
+    padding: 10px;
+    background: #d4be98;
+}
+
+#custom-river-tag-1 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-2 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-3 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-4 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-5 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-6 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-7 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-8 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+#custom-river-tag-9 {
+    font-size: 18px;
+    color: #d4be98;
+    padding: 12px;
+}
+
+#custom-media {
+    font-size: 16px;
+    color: #d4be98;
+    padding: 12px;
+}
+
+#battery {
+  padding: 7px;
+  color: #c5c8c6;
+}
+
+#backlight {
+  padding: 10px;
+  color: #d4be98;
+}
+#custom-quit {
+  padding: 10px;
+  color: #d4be98;
+}
+
+#clock {
+  padding: 10px;
+}
+#pulseaudio {
+  padding: 10px;
+  color: #d4be98;
+}
+
+#network {
+  color: #d4be98;
+  padding: 10px;
+}
