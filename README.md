@@ -20,6 +20,10 @@ Otherwise, create a desktop file named `river.desktop` and add it to `/usr/local
 
 Now you can start your wayland session in river by either in your login display manager or using the script `wayriver.sh`.
 
+**IMPORTANT**
+
+Recheck the script. The script uses dash because the configuration was assumed that your default shell is dash. I was using Void Linux when I was writing this script and Void defaults to dash. Adjust to your default user shell accordingly.
+
 ## Screenshot
 
 ![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/sample.png)
