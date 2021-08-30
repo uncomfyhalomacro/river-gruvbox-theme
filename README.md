@@ -20,5 +20,7 @@ Otherwise, create a desktop file named `river.desktop` and add it to `/usr/local
 
 Now you can start your wayland session in river by either in your login display manager or using the script `wayriver.sh`.
 
-## Screenshots
+## Screenshot
+
+![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/sample.png)
 
