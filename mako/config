@@ -1,0 +1,26 @@
+font=LiterationMono Nerd Font 10
+default-timeout=5000
+border-radius=4
+border-size=1
+[urgency=low]
+background-color=#282a36
+border-color=#f8f8f2
+text-color=#f8f8f2
+
+[urgency=normal]
+background-color=#282a36
+border-color=#f1fa8c
+text-color=#f1fa8c
+
+[urgency=high]
+background-color=#282a36
+border-color=#ff6e6e
+text-color=#ff6e6e
+
+[app-name="Spotify"]
+background-color=#282a36
+border-color=#00f74e
+
+[app-name="Firefox"]
+background-color=#282a36
+border-color=#ff796c
