@@ -9,6 +9,7 @@ ristate -vt -t -w > $RISTATE_LOG &
 while true
 do
     RISTATE_STATE=$(pgrep ristate)
+    declare -i RISTATE_LOG_LINES=$(wc -l $RISTATE_LOG)
     
     sleep 20
     if [[ $RISTATE_STATE -eq null ]]; then
