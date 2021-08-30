@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+# This is the example configuration file for river.
+#
+# If you wish to edit this, you will probably want to copy it to
+# $XDG_CONFIG_HOME/river/init or $HOME/.config/river/init first.
+#
+# See the river(1), riverctl(1), and rivertile(1) man pages for complete
+# documentation.
+# Setting some startup stuff
+
+###########
+# Interop #
+#'#########
+gsettings set org.gnome.desktop.default-applications.terminal exec foot.desktop
+riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY DESKTOP_SESSION=river XDG_CURRENT_DESKTOP=river"
+riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+riverctl spawn "/usr/libexec/polkit-gnome-authentication-agent-1"
+
+###########################
+# SCREENCASTING AND SOUND #
+###########################
+riverctl spawn "exec /usr/libexec/xdg-desktop-portal-wlr -r"
+riverctl spawn "exec /usr/libexec/xdg-desktop-portal -r"
+
+##########
+# RELOAD #
+##########
+# Binding to reload the configuration (good for edits on bindings or adding new stuff
+riverctl map normal "Mod4" R spawn $HOME/.config/river/init
+
+###################
+# Startup Widgets #
+###################
+riverctl spawn "river-tag-overlay --square-size 30 --background-colour 0x1C2021ff --border-colour 0xFB8019ff --square-active-occupied-colour 0x5D584Dff --square-active-background-colour 0xAF875Fff --square-active-border-colour 0xD79921 --tag-amount 11 --anchors 0:0:0:0 --square-padding 3"
+riverctl spawn $HOME/.config/river/wlsunset.sh
+riverctl spawn $HOME/.config/mako/mako.sh
+riverctl spawn $HOME/.config/river/swaybg.sh
+riverctl spawn $HOME/.config/river/bindings.sh
+riverctl spawn $HOME/.config/waybar/waybar.sh
+
+pkill wl-paste
+wl-paste -t text --watch clipman store & disown
+
+# LOCK ME UP (kinky)
+riverctl spawn $HOME/.config/river/lock.sh
+
+#####################
+# Themes and Colors #
+#####################
+# Borders
+riverctl border-color-focused 0xd4be98
+riverctl border-color-unfocused 0x92a58b
+riverctl border-width 2
+riverctl background-color 0x282828
+
+gnome_schema="org.gnome.desktop.interface"
+gsettings set "$gnome_schema" gtk-theme "Adwaita-dark"
+gsettings set "$gnome_schema" icon-theme "Papirus-Dark"
+gsettings set "$gnome_schema" cursor-theme "Breeze_Snow"
+gsettings set "$gnome_schema" font-name "Open Sauce Sans 10"
+
+riverctl xcursor-theme "Breeze_Snow"
+

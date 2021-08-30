@@ -1,0 +1,25 @@
+font=Hack Nerd Font 10
+default-timeout=5000
+layer=overlay
+anchor=bottom-right
+width=310
+height=110
+border-radius=4
+border-size=2
+max-icon-size=128
+text-alignment=center
+background-color=#1d2021
+text-color=#d4be98
+
+[urgency=low]
+border-color=#a9b665
+
+[urgency=normal]
+border-color=#1d2021
+on-notify=exec mpv /usr/share/sounds/gnome/default/alerts/drip.ogg
+
+[urgency=high]
+border-color=#ea6962
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+
