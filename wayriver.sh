@@ -13,6 +13,6 @@ if test -z "${XDG_RUNTIME_DIR}"; then
 		chmod 0700 "${XDG_RUNTIME_DIR}"
 	fi
 fi
-exec /usr/libexec/polkit-gnome-authentication-agent-1 &
+
 # Start river
 exec river
