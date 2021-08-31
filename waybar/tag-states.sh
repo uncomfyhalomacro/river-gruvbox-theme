@@ -10,11 +10,6 @@ do
 		continue
     else
     	RISTATE_LOG_LINES=$(wc -l $RISTATE_LOG | awk '{ print $1 }')
-        if [[ $RISTATE_LOG_LINES -ge 10 ]]; then
-            pkill ristate
-			continue
-        else
-            continue
-        fi
+        [[ $RISTATE_LOG_LINES -ge 10 ]] && pkill ristate
     fi
 done
