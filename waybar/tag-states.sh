@@ -9,13 +9,12 @@ ristate -vt -t -w > $RISTATE_LOG &
 while true
 do
     RISTATE_STATE=$(pgrep ristate)
-    declare -i RISTATE_LOG_LINES=$(wc -l $RISTATE_LOG)
-    
-    sleep 20
-    if [[ $RISTATE_STATE -eq null ]]; then
+    RISTATE_LOG_LINES=$(wc -l $RISTATE_LOG | awk '{ print $1 }')
+    sleep 10s
+    if [[ ! $RISTATE_STATE -eq null ]]; then
         ristate -vt -t -w > $RISTAGE_LOG &
     else
-        if [[ $RISTATE_LOG_LINES -ge 300 ]]; then
+        if [[ $RISTATE_LOG_LINES -ge 10 ]]; then
             pkill ristate
         else
             continue
