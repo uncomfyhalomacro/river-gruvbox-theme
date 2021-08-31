@@ -15,7 +15,7 @@ do
     if [[ $RISTATE_STATE -eq null ]]; then
         ristate -vt -t -w > $RISTAGE_LOG &
     else
-        if [[ $(wc -l $RISTATE_LOG) -ge 300 ]]; then
+        if [[ $RISTATE_LOG_LINES -ge 300 ]]; then
             pkill ristate
         else
             continue
