@@ -30,4 +30,5 @@ Recheck the script. The script uses dash because the configuration was assumed t
 
 ![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/sample.png)
 ![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/gruvbox-sample-bg.png)
+![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/tmux-foot-neovim-julia.png)
 
