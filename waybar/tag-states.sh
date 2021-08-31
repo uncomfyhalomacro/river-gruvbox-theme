@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 
-RISTATE_LOG="$HOME/ristate.log"
+export RISTATE_LOG="$HOME/ristate.log"
 while true
 do
-    sleep 10s
+    sleep 2s
     if [[ $(pgrep -x ristate) -eq null ]]; then
-        ristate -vt -t -w > $RISTAGE_LOG &
+        ristate -vt -t -w > $RISTATE_LOG &
 		continue
     else
     	RISTATE_LOG_LINES=$(wc -l $RISTATE_LOG | awk '{ print $1 }')
