@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-tail -1 $HOME/ristate.log | jq '.Title' -r
+title=$(tail -1 $HOME/ristate.log | jq '.title' -r)
+
+if [[ "$title" = "" ]]; then
+	echo -e "${USER} in ${HOSTNAME}"
+else
+	echo -e "$title"
+fi

@@ -2,10 +2,10 @@
 player_status=$(playerctl -p spotify status)
 if [[ $player_status = "Paused" ]]
 then
-    playerctl play
+    playerctl -p spotify play
 elif [[ $player_status = "Playing" ]]
 then
-    playerctl pause
+    playerctl -p spotify pause
 else
     echo -e "Spotify not running"
 fi

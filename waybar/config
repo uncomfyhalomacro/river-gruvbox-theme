@@ -1,10 +1,7 @@
-{
-   "layer": "bottom",
-	"height": 32,
-	"width": 1200,
-    "position": "top",
+[{
+    "layer": "bottom",
+    "position": "bottom",
     "modules-left": [
-        "custom/where",
         "custom/river-tag-1",
         "custom/river-tag-2",
         "custom/river-tag-3",
@@ -13,26 +10,28 @@
         "custom/river-tag-6",
         "custom/river-tag-7",
         "custom/river-tag-8",
-        "custom/river-tag-9"
+        "custom/river-tag-9",
     ],
-	"modules-center": ["custom/title", "custom/middle", "custom/media"],
-    "modules-right": ["backlight", "network", "battery", "pulseaudio", "tray", "clock"],
-    "clock": {
-        "format": " {:%H:%M}",
-        "format-alt": " {:%a %b %d}",
-        "tooltip": true
-    },
+    "modules-right": [
+        "backlight", 
+        "network",
+        "custom/ping",
+        "battery", 
+        "pulseaudio",
+    ],
+    "modules-center": [
+        "river/tags"
+    ],
 
-    "custom/title": {
-        "format": "{}",
-        "exec": "$HOME/.config/waybar/get_title.sh",
-        "interval": 1,
-	    "min-length": 3,
-	    "max-length": 50
+    "river/tags": {
+        "num-tags": 9,
+    },
+    "custom/fakespace": {
+        "format": "  "
     },
 
     "custom/middle": {
-        "format": "   ",
+        "format": "  ",
     },
 
     "custom/where": {
@@ -94,13 +93,10 @@
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 30
     },
-    "custom/media": {
-        "format": " {}",
-        "exec": "$HOME/.config/waybar/get_media.sh",
-        "on-click": "$HOME/.config/waybar/play_pause_media.sh",
-	    "min-length": 3,
-	    "max-length": 50,
-		"interval": 1
+    "custom/ping": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/get_ping.sh",
+        "interval": 1
     },
     "custom/keyboard": {
         "format": " {}",
@@ -139,6 +135,85 @@
             "activated": "👀",
             "deactivated": "🙈"
         }
-    }
-}
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+},
+{
 
+    "layer": "bottom",
+    "position": "top",
+
+	"modules-left": [
+        "custom/title",
+    ],
+
+    "modules-center": [
+        "clock",
+    ],
+	"modules-right": [
+        "custom/media",
+        "custom/web",
+        "custom/explorer",
+        "custom/divider-right",
+        "tray",
+        "custom/divider-left",
+        "custom/fuzzel",
+
+	],
+
+    "custom/title": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/get_title.sh",
+        "interval": 1,
+	    "min-length": 3,
+	    "max-length": 120
+    },
+    "custom/fuzzel": {
+        "format": "   ",
+        "on-click": "fuzzel -i Papirus -f 'Hasklug Nerd Font' --background=d4be98cc -t 3c3836ff -w 60 --selection-color d79921ff --selection-text-color 3c3836ff"
+    },
+    "custom/explorer": {
+        "format": "  ",
+        "on-click": "nautilus",
+    },
+    "custom/divider-right": {
+        "format": ""
+    },
+    "custom/divider-left": {
+        "format": ""
+    },
+    "custom/web": {
+        "format": " 爵 ",
+        "on-click": "firefox-developer-edition",
+    },
+    "custom/media": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/get_media.sh",
+        "on-click": "$HOME/.config/waybar/play_pause_media.sh",
+        "on-scroll-up": "playerctl -p spotify previous",
+        "on-scroll-down": "playerctl -p spotify next",
+        "smooth-scrolling-threshold": 1.0,
+        "on-click-middle": "spotify",
+	    "min-length": 3,
+	    "max-length": 120,
+		"interval": 1
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a %b %d}",
+        "tooltip": true
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 6
+    }
+}]
