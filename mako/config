@@ -1,21 +1,27 @@
-font=LiterationMono Nerd Font 10
+font=JetBrainsMono Nerd Font 10
 default-timeout=5000
+layer=overlay
+anchor=bottom-right
+width=300
+height=110
 border-radius=4
 border-size=1
+max-icon-size=64
+
 [urgency=low]
-background-color=#282a36
-border-color=#f8f8f2
-text-color=#f8f8f2
+background-color=#1d2021
+border-color=#d4be98
+text-color=#a9b665
 
 [urgency=normal]
-background-color=#282a36
+background-color=#1d2021
 border-color=#f1fa8c
-text-color=#f1fa8c
+text-color=#a9b665
 
 [urgency=high]
-background-color=#282a36
-border-color=#ff6e6e
-text-color=#ff6e6e
+background-color=#1d2021
+border-color=#ea6962
+text-color=#a9b665
 
 [app-name="Spotify"]
 background-color=#282a36
