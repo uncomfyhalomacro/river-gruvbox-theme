@@ -30,3 +30,5 @@ Recheck the script. The script uses dash because the configuration was assumed t
 
 ![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/screenshot.png)
 
+![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/labeled%20bottom%20bars.png)
+
