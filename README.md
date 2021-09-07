@@ -15,6 +15,7 @@ You must have the following software in order to make this work:
 - [waybar](https://github.com/Alexays/Waybar) (bar like polybar but for wayland)
 - [mako](https://github.com/emersion/mako) (a notification daemon for wayland)
 - [foot](https://codeberg.org/dnkl/foot) (a native wayland terminal emulator)
+- [fuzzel](https://codeberg.org/dnkl/fuzzel) (a rofi inspired application launcher)
 - Install a Nerd Font. I use JetBrainsMono Nerd Font here for the waybar.
 
 Then either copy `wayriver.sh` to somewhere you want (e.g. $HOME) so you can start river there, assuming you are not using a login display manager such as SDDM or LightDM.
@@ -28,7 +29,7 @@ Recheck the script. The script uses dash because the configuration was assumed t
 
 ## Screenshot
 
-![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/screenshot.png)
+![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/polished.png)
 
 ![Image](https://github.com/uncomfyhalomacro/river-gruvbox-theme/blob/main/screenshots/labeled%20bottom%20bars.png)
 
