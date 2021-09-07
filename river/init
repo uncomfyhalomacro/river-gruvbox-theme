@@ -17,7 +17,7 @@ mod="Mod4"
 term="$HOME/.local/bin/footq"
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal $mod+Shift Return spawn $term
+riverctl map normal $mod+Shift Return zoom
 
 # App Bindings
 riverctl map normal $mod I spawn firefox-developer-edition
@@ -37,7 +37,7 @@ riverctl spawn /usr/bin/mako
 riverctl spawn "/usr/bin/foot --server"
 
 # Mod+Q to close the focused view
-riverctl map normal $mod Q close
+riverctl map normal $mod+Shift Q close
 
 # Mod+E to exit river
 riverctl map normal $mod+Shift E exit
@@ -60,7 +60,7 @@ riverctl map normal $mod+Shift Period send-to-output next
 riverctl map normal $mod+Shift Comma send-to-output previous
 
 # Mod+Return to bump the focused view to the top of the layout stack
-riverctl map normal $mod Return zoom
+riverctl map normal $mod Return spawn $term
 
 # Mod+H and Mod+L to decrease/increase the main ratio of rivercarro
 riverctl map normal $mod H send-layout-cmd rivercarro "main-ratio -0.05"
