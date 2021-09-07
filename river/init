@@ -10,13 +10,14 @@
 
 # Setting some startup stuff
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+riverctl spawn "$HOME/.config/waybar/waybar.sh"
 riverctl spawn "$HOME/.config/waybar/tag-states.sh"
 # Use the "logo" key as the primary modifier
 mod="Mod4"
 term="$HOME/.local/bin/footq"
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal $mod+Shift Return footq
+riverctl map normal $mod+Shift Return spawn $term
 
 # App Bindings
 riverctl map normal $mod I spawn firefox-developer-edition
