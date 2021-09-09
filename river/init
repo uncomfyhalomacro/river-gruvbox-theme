@@ -8,17 +8,17 @@
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # documentation.
 
+# Use the "logo" key as the primary modifier
+mod="Mod4"
+
 # Setting some startup stuff
-# riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway"
 riverctl spawn ~/.config/waybar/tag-states.sh
 riverctl spawn "river-tag-overlay --background-colour 0x1d2021 --border-colour 0xa9b665 --square-active-occupied-colour 0xd79921 --square-active-background-colour 0xa9b665 --square-active-border-colour 0xd4be98"
 riverctl map normal $mod U spawn "fuzzel -i Papirus -f 'Hasklug Nerd Font' --background=d4be98cc -t 3c3836ff -w 60 --selection-color d79921ff --selection-text-color 3c3836ff"
 riverctl spawn ~/.config/river/swaybg.sh
 riverctl spawn ~/.config/waybar/waybar.sh
 riverctl spawn /usr/bin/mako
-
-# Use the "logo" key as the primary modifier
-mod="Mod4"
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal $mod+Shift Return spawn foot
