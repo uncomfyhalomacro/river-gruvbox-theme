@@ -1,0 +1,99 @@
+bar:
+  height: 32
+  location: top
+  font: Hack Nerd Font:pixelsize=15
+  spacing: 5
+  margin: 0
+  layer: bottom
+  background: 1d202100
+  foreground: d4be98ff
+  center:
+    - script:
+        path: /home/uncomfy/.config/yambar/get_media.sh
+        content:
+          string:
+            text: "{status}"
+            foreground: 1DB954ff
+            on-click: 
+              left: /home/uncomfy/.config/yambar/play_pause_media.sh
+              right: flatpak run com.spotify.Client
+              wheel-up: playerctl -p spotify previous
+              wheel-down: playerctl -p spotify next
+            left-margin: 5
+            right-margin: 5
+            deco:
+              stack:
+                - underline:
+                   size: 2
+                   color: 1DB954ff
+                - background:
+                   color: 191414ff
+  left:
+    - label:
+       content:          
+         - string:
+            text: ﳐ
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 1
+         - string:
+            text: 
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 2
+         - string:
+            text: 
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 4
+         - string:
+            text: 
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 8
+         - string:
+            text: 
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 16
+         - string:
+            text: 
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 32
+         - string:
+            text: 
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 64
+         - string:
+            text: 
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 128
+         - string:
+            text:  
+            right-margin: 10
+            left-margin: 10
+            on-click: riverctl set-focused-tags 256
+  right:
+    - clock:
+        time-format: "%H:%M %Z"
+        content:
+          - string:
+              text: " {date}"
+              right-margin: 5
+              left-margin: 5
+              foreground: 000000ff
+              deco:
+                  background:
+                    color: d8a657ff
+
+          - string:
+              right-margin: 5
+              left-margin: 5
+              foreground: 000000ff
+              text: " {time}"
+              deco:
+                  background:
+                    color: d4be98ff

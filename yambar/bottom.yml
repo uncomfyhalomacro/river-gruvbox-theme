@@ -1,16 +1,241 @@
 bar:
-  height: 26
+  height: 20
   location: bottom
-  font: Hack Nerd Font:pixelsize=12
+  font: Hack Nerd Font:pixelsize=10
   spacing: 5
-  margin: 7
+  margin: 0
   layer: bottom
   background: 1d202100
   foreground: d4be98ff
+  left:
+    - river:
+        title:
+          empty: {}
+        content:
+          map:
+            tag: occupied
+            values:
+              false:
+                empty: {}
+                #string: 
+                  #text: "{id}"
+              true:
+                - string:
+                    margin: 5
+                    text: "{id}"
+                    foreground: 000000ff
+                    #on-click: /home/uncomfy/.config/yambar/riverctl-sample.sh "{id}"
+                    deco:
+                      background:
+                        color: ddb071ff
+                - string:
+                    margin: 5
+                    text: "{state}"
+                    deco:
+                      underline:
+                        size: 2
+                        color: ddb071ff
 
   center:
-    - clock:
-        time-format: "%H:%M %Z"
+    - river:
+        title:
+          string:
+            left-margin: 5
+            right-margin: 5
+            text: "{title}"
+            max: 80
+            deco:
+              underline:
+                size: 2
+                color: ea6962ff
         content:
-          - string: {text: "{date}", right-margin: 5}
-          - string: {text: "{time}"}
+          map:
+            tag: occupied
+            values:
+              false: {empty: {}}
+              true: {empty: {}}
+  right:
+    - backlight:
+        name: intel_backlight
+        content:
+          string:
+            left-margin: 5
+            right-margin: 5
+            text: " {percent}%"
+            foreground: 1d2021ff
+            deco:
+              background:
+                color: e5da62ff
+            on-click:
+              wheel-up: brightnessctl s +5%
+              wheel-down: brightnessctl s 5%-
+    - network:
+        name: enp7s0
+        content:
+          map:
+            tag: carrier
+            values:
+              false: {empty: {}}
+              true:
+                map:
+                  tag: state
+                  default: {string: {text: " {name}", foreground: ffffff66}}
+                  values:
+                    up:
+                      map:
+                        tag: ipv4
+                        default: 
+                          string:
+                            foreground: 1d2021ff
+                            right-margin: 5
+                            left-margin: 5
+                            text: " {name}"
+                            deco:
+                              background:
+                                color: 7daea3ff
+                        values:
+                          "":
+                            string: 
+                              right-margin: 5
+                              left-margin: 5
+                              text: " {name}" 
+                              foreground: 1d2021ff
+                              deco:
+                                background:
+                                  color: 7daea3ff
+    - alsa:
+        card: hw:PCH
+        mixer: Master
+        content:
+          map:
+            tag: online
+            values:
+              false: {string: {text: , foreground: ff0000ff}}
+              true:
+                map:
+                  on-click:
+                    left: pamixer -t
+                    wheel-down: pamixer -d 5
+                    wheel-up: pamixer -i 5
+                  tag: muted
+                  values:
+                    true:
+                      string:
+                        text: " Muted"
+                        foreground: ea6962ff
+                        right-margin: 5
+                        left-margin: 5
+                        deco:
+                          stack:
+                            - background:
+                                color: 000000ff
+                            - underline:
+                                size: 2
+                                color: ea6962ff
+                    false:
+                      ramp:
+                        tag: volume
+                        items:
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string: 
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+    - battery:
+        name: BAT1
+        poll-interval: 30
+        content:
+          map:
+            tag: state
+            values:
+              discharging:
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: , foreground: ff0000ff}
+                      - string: {text: , foreground: ffa600ff}
+                      - string: {text: }
+                      - string: {text: }
+                      - string: {text: }
+                      - string: {text: }
+                      - string: {text: }
+                      - string: {text: }
+                      - string: {text: }
+                      - string: {text: , foreground: 00ff00ff}
+                - string: {text: " {capacity}% {estimate}"}
+              charging:
+                - string: {text: , foreground: 00ff00ff}
+                - string: {text: " {capacity}% {estimate}"}
+              full:
+                - string: {text: , foreground: 00ff00ff}
+                - string: {text: " {capacity}% full"}
+              not charging:
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text:  , foreground: ff0000ff}
+                      - string: {text:  , foreground: ffa600ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                      - string: {text:  , foreground: 00ff00ff}
+                - string: {text: " {capacity}%"}
