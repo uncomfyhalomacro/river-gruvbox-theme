@@ -52,13 +52,15 @@ bar:
               true: {empty: {}}
   right:
     - script:
-        poll-interval: 1
         path: /home/uncomfy/.config/yambar/get_media.sh
         content:
           string:
             text: "{status}"
             foreground: 1DB954ff
-            on-click: /home/uncomfy/.config/yambar/play_pause_media.sh
+            on-click: 
+              left: /home/uncomfy/.config/yambar/play_pause_media.sh
+              wheel-up: playerctl -p spotify previous
+              wheel-down: playerctl -p spotify next
             left-margin: 5
             right-margin: 5
             deco:
