@@ -1,7 +1,7 @@
 
 # ugh
 
-bg_bat: &bg_bat {background: {color: d4be98ff}}
+bg_bat: &bg_bat {background: {color: d4be9866}}
 bar:
   height: 30
   location: bottom
@@ -48,6 +48,7 @@ bar:
             right-margin: 5
             text: "{title}"
             max: 80
+            #deco: *bg_bat
             #deco:
               #underline:
                 #size: 2
@@ -226,7 +227,7 @@ bar:
                 - string: {text: , foreground: 00ff00ff, deco: *bg_bat}
                 - string: {text: " {capacity}% {estimate}", deco: *bg_bat}
               full:
-                - string: {text: "  full", foreground: 00ff00ff}
+                - string: {text: "  ", foreground: 00ff00ff}
               not charging:
                 - ramp:
                     tag: capacity
