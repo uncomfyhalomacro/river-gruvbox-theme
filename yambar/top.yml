@@ -3,7 +3,7 @@ bar:
   location: top
   font: Hack Nerd Font:pixelsize=15
   spacing: 5
-  margin: 7
+  margin: 0
   layer: bottom
   background: 1d202100
   foreground: d4be98ff
