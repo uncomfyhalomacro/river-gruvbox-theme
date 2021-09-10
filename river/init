@@ -24,6 +24,7 @@ riverctl spawn "wlsunset -l 8.17 -L 123.80"
 riverctl spawn /usr/bin/mako
 riverctl spawn "/usr/bin/foot --server"
 riverctl spawn $HOME/.config/yambar/yambar.sh
+riverctl spawn $HOME/.config/river/swaybg.sh
 
 riverctl map normal "None" Print spawn $HOME/.local/bin/mygrimshot.sh
 riverctl map normal "$mod" Print spawn '$HOME/.local/bin/mygrimshot.sh area'
