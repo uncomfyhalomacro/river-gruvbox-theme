@@ -1,7 +1,7 @@
 window.eDP-1 * {
   font-size: 13px;
   border-radius: 0px;
-  font-family: "Hack Nerd Font";
+  font-family: "Hasklug Nerd Font";
   min-height: 0px;
   min-width: 0px;
 }
@@ -187,4 +187,3 @@ window#waybar.hidden {
    font-size: 10px; 
   color: #d4be98;
   padding: 0px 10px 0px 0px;
-}

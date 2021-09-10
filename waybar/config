@@ -70,18 +70,11 @@
     "modules-right": [
         "backlight", 
         "network",
-        "custom/ping",
         "battery", 
         "pulseaudio",
         "custom/media",
     ],
-    "modules-left": [
-        "river/tags"
-    ],
 
-    "river/tags": {
-        "num-tags": 9,
-    },
     "custom/fakespace2": {
         "format": "Tag indicators: "
     },
