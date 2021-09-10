@@ -211,7 +211,7 @@
         "on-scroll-up": "playerctl -p spotify previous",
         "on-scroll-down": "playerctl -p spotify next",
         "smooth-scrolling-threshold": 1.0,
-        "on-click-middle": "spotify",
+        "on-click-middle": "flatpak run com.spotify.Client",
 	    "min-length": 3,
 	    "max-length": 120,
 		"interval": 1
