@@ -103,6 +103,99 @@ bar:
                               deco:
                                 background:
                                   color: 7daea3ff
+    - alsa:
+        card: hw:PCH
+        mixer: Master
+        content:
+          map:
+            tag: online
+            values:
+              false: {string: {text: , foreground: ff0000ff}}
+              true:
+                map:
+                  on-click:
+                    left: pamixer -t
+                    wheel-down: pamixer -d 5
+                    wheel-up: pamixer -i 5
+                  tag: muted
+                  values:
+                    true:
+                      string:
+                        text: " Muted"
+                        foreground: ea6962ff
+                        right-margin: 5
+                        left-margin: 5
+                        deco:
+                          stack:
+                            - background:
+                                color: 000000ff
+                            - underline:
+                                size: 2
+                                color: ea6962ff
+                    false:
+                      ramp:
+                        tag: volume
+                        items:
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string: 
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
+                          - string:
+                              text: " {percent}"
+                              foreground: a9b665ff
+                              right-margin: 5
+                              left-margin: 5
+                              deco:
+                                stack:
+                                  - background:
+                                      color: 000000ff
+                                  - underline:
+                                      size: 2
+                                      color: a9b665ff
     - battery:
         name: BAT1
         poll-interval: 30

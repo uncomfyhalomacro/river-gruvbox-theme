@@ -16,6 +16,7 @@ bar:
             foreground: 1DB954ff
             on-click: 
               left: /home/uncomfy/.config/yambar/play_pause_media.sh
+              right: flatpak run com.spotify.Client
               wheel-up: playerctl -p spotify previous
               wheel-down: playerctl -p spotify next
             left-margin: 5
