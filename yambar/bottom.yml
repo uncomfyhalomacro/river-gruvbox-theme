@@ -55,6 +55,20 @@ bar:
               false: {empty: {}}
               true: {empty: {}}
   right:
+    - backlight:
+        name: intel_backlight
+        content:
+          string:
+            left-margin: 5
+            right-margin: 5
+            text: " {percent}%"
+            foreground: 1d2021ff
+            deco:
+              background:
+                color: e5da62ff
+            on-click:
+              wheel-up: brightnessctl s +5%
+              wheel-down: brightnessctl s 5%-
     - network:
         name: enp7s0
         content:
