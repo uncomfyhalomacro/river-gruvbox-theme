@@ -11,7 +11,7 @@ You must have the following software in order to make this work:
 - [playerctl](https://github.com/altdesktop/playerctl) (needed for playback stuff. Available usually in the official repositories)
 - [river-tag-overlay](https://git.sr.ht/~leon_plickat/river-tag-overlay) (for showing pop-ups about the currently focused and occupied tags)
 - [rivercarro](https://git.sr.ht/~novakane/rivercarro) (more layout options)
-- [ristate](https://gitlab.com/snakedye/ristate) (a river-status client)
+- [ristate](https://gitlab.com/snakedye/ristate) (a river-status client -> unused at the moment)
 - [waybar](https://github.com/Alexays/Waybar) (bar like polybar but for wayland -> now replaced)
 - [yambar](https://codeberg.org/dnkl/yambar) (lightweight bar)
 - [mako](https://github.com/emersion/mako) (a notification daemon for wayland)
