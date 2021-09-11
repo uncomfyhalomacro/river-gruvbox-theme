@@ -206,7 +206,8 @@ bar:
             values:
               discharging:
                 - ramp:
-                    tag: capacity
+                    tag: 
+                - capacity:
                       - string: {text: "  ", foreground: ff0000ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
                       - string: {text: "  ", foreground: ffa600ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
                       - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
@@ -220,7 +221,7 @@ bar:
                 - string: {text: " {capacity}% {estimate}", deco: *bg_bat}
               charging:
                 - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                - string: {text: " {capacity}% {estimate}", deco: *bg_bat}
+                - string: {text: " {capacity}% {estimate}", right-margin: 5, deco: *bg_bat}
               full:
                 - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5}
               not charging:
