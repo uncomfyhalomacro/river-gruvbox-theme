@@ -1,7 +1,8 @@
 
 # ugh
 
-bg_bat: &bg_bat {stack: [{background: {color: d4be9866}}, {underline: {size: 2, color: d0f27bff}}]}
+bg_tot: &bg_tot {stack: [{background: {color: a9b665dd}}, {underline: {size: 2, color: ea6962ff}}]}
+bg_bat: &bg_bat {stack: [{background: {color: 282828ff}}, {underline: {size: 2, color: d0f27bff}}]}
 bg_tit: &bg_tit {stack: [{background: {color: ea696266}}, {underline: {size: 2, color: ea6962ff}}]}
 bar:
   height: 30
@@ -11,7 +12,7 @@ bar:
   margin: 0
   layer: bottom
   foreground: 1d2021ff
-  background: d4be9800
+  background: 94949466
 
   left:
     - river:
@@ -48,11 +49,7 @@ bar:
             text: "{title}"
             max: 80
         content:
-          map:
-            tag: occupied
-            values:
-              false: {empty: {}}
-              true: {empty: {}}
+          empty: {}
   right:
     - backlight:
         name: intel_backlight

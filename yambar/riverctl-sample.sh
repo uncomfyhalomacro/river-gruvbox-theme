@@ -1,9 +1,8 @@
 #!/bin/sh
 
-if [[ $1 == "9" ]]; then
-    riverctl set-focused-tags 1
-else
-	tag=$((1 << ($(expr $1) + 1)))
-	riverctl set-focused-tags $tag
-fi
-    
+while true; do
+    status=$(ristate -w | jq '.title' -r & pkill ristate)
+    echo "tag|string|$status"
+    echo ""
+    sleep 1
+done
