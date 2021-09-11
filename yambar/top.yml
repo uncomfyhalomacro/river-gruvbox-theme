@@ -1,17 +1,18 @@
 bar:
   height: 32
   location: top
-  font: Hack Nerd Font:pixelsize=15
+  font: Hasklug Nerd Font:pixelsize=15
   spacing: 5
   margin: 0
   layer: bottom
-  background: 1d202100
-  foreground: d4be98ff
+  foreground: 1d2021ff
+  background: 00000000
   center:
     - script:
         path: /home/uncomfy/.config/yambar/get_media.sh
         content:
           string:
+            font: Hasklug Nerd Font:pixelsize=20
             text: "{status}"
             foreground: 1DB954ff
             on-click: 
@@ -21,13 +22,6 @@ bar:
               wheel-down: playerctl -p spotify next
             left-margin: 5
             right-margin: 5
-            deco:
-              stack:
-                - underline:
-                   size: 2
-                   color: 1DB954ff
-                - background:
-                   color: 191414ff
   left:
     - label:
        content:          
@@ -85,15 +79,9 @@ bar:
               right-margin: 5
               left-margin: 5
               foreground: 000000ff
-              deco:
-                  background:
-                    color: d8a657ff
 
           - string:
               right-margin: 5
               left-margin: 5
               foreground: 000000ff
               text: " {time}"
-              deco:
-                  background:
-                    color: d4be98ff

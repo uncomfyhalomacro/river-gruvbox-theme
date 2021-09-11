@@ -1,12 +1,17 @@
+
+# ugh
+
+bg_bat: &bg_bat {stack: [{background: {color: d4be9866}}, {underline: {size: 2, color: d0f27bff}}]}
 bar:
-  height: 20
+  height: 30
   location: bottom
-  font: Hack Nerd Font:pixelsize=10
+  font: Hack Nerd Font:pixelsize=12:style=Bold
   spacing: 5
   margin: 0
   layer: bottom
-  background: 1d202100
-  foreground: d4be98ff
+  foreground: 1d2021ff
+  background: d4be9800
+
   left:
     - river:
         title:
@@ -44,10 +49,6 @@ bar:
             right-margin: 5
             text: "{title}"
             max: 80
-            deco:
-              underline:
-                size: 2
-                color: ea6962ff
         content:
           map:
             tag: occupied
@@ -206,36 +207,33 @@ bar:
               discharging:
                 - ramp:
                     tag: capacity
-                    items:
-                      - string: {text: , foreground: ff0000ff}
-                      - string: {text: , foreground: ffa600ff}
-                      - string: {text: }
-                      - string: {text: }
-                      - string: {text: }
-                      - string: {text: }
-                      - string: {text: }
-                      - string: {text: }
-                      - string: {text: }
-                      - string: {text: , foreground: 00ff00ff}
-                - string: {text: " {capacity}% {estimate}"}
+                      - string: {text: "  ", foreground: ff0000ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: ffa600ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                - string: {text: " {capacity}% {estimate}", deco: *bg_bat}
               charging:
-                - string: {text: , foreground: 00ff00ff}
-                - string: {text: " {capacity}% {estimate}"}
+                - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                - string: {text: " {capacity}% {estimate}", deco: *bg_bat}
               full:
-                - string: {text: , foreground: 00ff00ff}
-                - string: {text: " {capacity}% full"}
+                - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5}
               not charging:
                 - ramp:
                     tag: capacity
                     items:
-                      - string: {text:  , foreground: ff0000ff}
-                      - string: {text:  , foreground: ffa600ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                      - string: {text:  , foreground: 00ff00ff}
-                - string: {text: " {capacity}%"}
+                      - string: {text:  , foreground: ff0000ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: ffa600ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                - string: {text: " {capacity}%", foreground: ffffffff, deco: *bg_bat}

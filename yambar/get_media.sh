@@ -5,14 +5,14 @@ while true; do
 
 	if [[ $player_status = "Playing" ]]
 	then
-		song_status=' '
+		song_status=' '
 		echo -e "status|string|$song_status $media"
 	elif [[ $player_status = "Paused" ]]
 	then
-		song_status=' '
+		song_status=' '
 		echo -e "status|string|$song_status $media"
 	else
-		song_status=' spotify'
+		song_status=' '
 		echo -e "status|string|$song_status"
 	fi
 	sleep 1

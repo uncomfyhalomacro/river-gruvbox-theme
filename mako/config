@@ -5,28 +5,29 @@ anchor=bottom-right
 width=300
 height=110
 border-radius=4
-border-size=1
+border-size=2
 max-icon-size=64
 
 [urgency=low]
-background-color=#1d2021
+text-color=#1d2021
 border-color=#d4be98
-text-color=#a9b665
+background-color=#d4be98
 
 [urgency=normal]
-background-color=#1d2021
+text-color=#1d2021
 border-color=#f1fa8c
-text-color=#a9b665
+background-color=#d4be98
 
 [urgency=high]
-background-color=#1d2021
+text-color=#1d2021
 border-color=#ea6962
-text-color=#a9b665
+background-color=#d4be98
 
 [app-name="Spotify"]
-background-color=#282a36
+background-color=#d4be98
+text-color=#1d2021
 border-color=#00f74e
 
 [app-name="Firefox"]
-background-color=#282a36
+background-color=#d4be98
 border-color=#ff796c
