@@ -23,14 +23,11 @@ bar:
             values:
               false:
                 empty: {}
-                #string: 
-                  #text: "{id}"
               true:
                 - string:
                     margin: 5
                     text: "{id}"
                     foreground: 000000ff
-                    #on-click: /home/uncomfy/.config/yambar/riverctl-sample.sh "{id}"
                     deco:
                       background:
                         color: ddb071ff
