@@ -12,6 +12,7 @@ bar:
         path: /home/uncomfy/.config/yambar/get_media.sh
         content:
           string:
+            font: Hasklug Nerd Font:pixelsize=20
             text: "{status}"
             foreground: 1DB954ff
             on-click: 
@@ -21,11 +22,11 @@ bar:
               wheel-down: playerctl -p spotify next
             left-margin: 5
             right-margin: 5
-            deco:
-              stack:
-                - underline:
-                   size: 2
-                   color: 1DB954ff
+            #deco:
+              #stack:
+                #- underline:
+                   #size: 2
+                   #color: 1DB954ff
   left:
     - label:
        content:          
