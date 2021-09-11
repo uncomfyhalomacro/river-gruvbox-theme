@@ -2,6 +2,7 @@
 # ugh
 
 bg_bat: &bg_bat {stack: [{background: {color: d4be9866}}, {underline: {size: 2, color: d0f27bff}}]}
+bg_tit: &bg_tit {stack: [{background: {color: ea696266}}, {underline: {size: 2, color: ea6962ff}}]}
 bar:
   height: 30
   location: bottom
@@ -68,8 +69,8 @@ bar:
               background:
                 color: e5da62ff
             on-click:
-              wheel-up: brightnessctl s +5%
-              wheel-down: brightnessctl s 5%-
+              wheel-up: brightnessctl s +1%
+              wheel-down: brightnessctl s 1%-
     - network:
         name: enp7s0
         content:
@@ -208,22 +209,22 @@ bar:
                 - ramp:
                     tag: capacity
                     items:
-                      - string: {text: "  ", foreground: ff0000ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: ffa600ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: ff0000ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: ffa600ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
                 - string: {text: " {capacity}% {estimate}", deco: *bg_bat}
               charging:
                 - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
                 - string: {text: " {capacity}% {estimate}", right-margin: 5, deco: *bg_bat}
               full:
-                - string: {text: "  ", foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
               not charging:
                 - ramp:
                     tag: capacity
