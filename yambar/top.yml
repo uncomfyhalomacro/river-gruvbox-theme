@@ -1,3 +1,5 @@
+bg_tit: &bg_tit {stack: [{background: {color: a9b665dd}}, {underline: {size: 2, color: ea6962ff}}]}
+
 bar:
   height: 32
   location: top
@@ -23,53 +25,212 @@ bar:
             left-margin: 5
             right-margin: 5
   left:
-    - label:
-       content:          
-         - string:
-            text: ﳐ
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 1
-         - string:
-            text: 
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 2
-         - string:
-            text: 
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 4
-         - string:
-            text: 
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 8
-         - string:
-            text: 
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 16
-         - string:
-            text: 
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 32
-         - string:
-            text: 
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 64
-         - string:
-            text: 
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 128
-         - string:
-            text:  
-            right-margin: 10
-            left-margin: 10
-            on-click: riverctl set-focused-tags 256
+    - river:
+        content:
+          map:
+            tag: id
+            values:
+              1:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: ﳐ
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 1
+                    true:
+                      string:
+                        text: ﳐ
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 1
+                        deco: *bg_tit
+              2:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 2
+                    true:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 2
+                        deco: *bg_tit
+              3:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 4
+                    true:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 4
+                        deco: *bg_tit
+              4:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 8
+                    true:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 8
+                        deco: *bg_tit
+              5:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 16
+                    true:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 16
+                        deco: *bg_tit
+              6:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 32
+                    true:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 32
+                        deco: *bg_tit
+              7:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 64
+                    true:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 64
+                        deco: *bg_tit
+              8:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 128
+                    true:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 128
+                        deco: *bg_tit
+              9:
+                map:
+                  tag: visible
+                  values:
+                    false:
+                      string:
+                        text:  
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 256
+                    true:
+                      string:
+                        text:  
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 256
+                        deco: *bg_tit
+  #left:
+    #- label:
+       #content:          
+         #- string:
+            #text: ﳐ
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 1
+         #- string:
+            #text: 
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 2
+         #- string:
+            #text: 
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 4
+         #- string:
+            #text: 
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 8
+         #- string:
+            #text: 
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 16
+         #- string:
+            #text: 
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 32
+         #- string:
+            #text: 
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 64
+         #- string:
+            #text: 
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 128
+         #- string:
+            #text:  
+            #right-margin: 10
+            #left-margin: 10
+            #on-click: riverctl set-focused-tags 256
   right:
     - clock:
         time-format: "%H:%M %Z"
