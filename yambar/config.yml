@@ -9,13 +9,13 @@ bg_bat: &bg_bat {stack: [{background: {color: 282828ff}}, {underline: {size: 2, 
 #bg_tit: &bg_tit {stack: [{background: {color: ea696266}}, {underline: {size: 2, color: ea6962ff}}]}
 bar:
   height: 30
-  location: bottom
+  location: top
   font: Hack Nerd Font:pixelsize=14:style=Bold
   spacing: 5
   margin: 0
   layer: bottom
   foreground: 1d2021ff
-  background: 949494dd
+  background: 94949400
 
   #left:
     #- river:
@@ -325,7 +325,7 @@ bar:
             text: "{status}"
             left-margin: 5
             right-margin: 5
-            foreground: 167043ff
+            foreground: 1DB954ff
             max: 50
             on-click: 
               left: /home/uncomfy/.config/yambar/play_pause_media.sh
@@ -517,7 +517,7 @@ bar:
                       - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
                 - string: {text: "{capacity}%", foreground: ffffffff, deco: *bg_bat}
     - clock:
-        time-format: "%H:%M %Z"
+        time-format: "%H:%M:%S %Z"
         content:
           - string:
               text: " {date}"
