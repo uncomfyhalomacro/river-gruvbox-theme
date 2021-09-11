@@ -318,6 +318,7 @@ bar:
             text: "｜"
         
     - script:
+        poll-interval: 1
         path: /home/uncomfy/.config/yambar/get_media.sh
         content:
           string:

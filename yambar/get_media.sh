@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-while true; do
+#while true; do
 	media=$(playerctl -p spotify metadata -f "{{artist}} - {{title}}")
 	player_status=$(playerctl -p spotify status)
 
@@ -17,4 +17,4 @@ while true; do
 	fi
 	sleep 1
 	echo ""
-done
+#done
