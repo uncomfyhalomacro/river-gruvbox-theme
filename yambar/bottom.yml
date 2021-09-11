@@ -1,45 +1,307 @@
 
 # ugh
 
-bg_tot: &bg_tot {stack: [{background: {color: a9b665dd}}, {underline: {size: 2, color: ea6962ff}}]}
+bg_tit: &bg_tit {stack: [{background: {color: a9b665dd}}, {underline: {size: 2, color: ea6962ff}}]}
+#bg_tot: &bg_tot {stack: [{background: {color: a9b665dd}}, {underline: {size: 2, color: ea6962ff}}]}
+
+bg_tot: &bg_tot {underline: {size: 2, color: ea6962ff}}
 bg_bat: &bg_bat {stack: [{background: {color: 282828ff}}, {underline: {size: 2, color: d0f27bff}}]}
-bg_tit: &bg_tit {stack: [{background: {color: ea696266}}, {underline: {size: 2, color: ea6962ff}}]}
+#bg_tit: &bg_tit {stack: [{background: {color: ea696266}}, {underline: {size: 2, color: ea6962ff}}]}
 bar:
   height: 30
   location: bottom
-  font: Hack Nerd Font:pixelsize=12:style=Bold
+  font: Hack Nerd Font:pixelsize=10:style=Bold
   spacing: 5
   margin: 0
   layer: bottom
   foreground: 1d2021ff
-  background: 94949466
+  background: 949494dd
+
+  #left:
+    #- river:
+        #title:
+          #empty: {}
+        #content:
+          #map:
+            #tag: occupied
+            #values:
+              #false:
+                #empty: {}
+              #true:
+                #- string:
+                    #margin: 5
+                    #text: "{id}"
+                    #foreground: 000000ff
+                    #deco:
+                      #background:
+                        #color: ddb071ff
+                #- string:
+                    #margin: 5
+                    #text: "{state}"
+                    #deco:
+                      #underline:
+                        #size: 2
+                        #color: ddb071ff
 
   left:
     - river:
-        title:
-          empty: {}
         content:
           map:
-            tag: occupied
+            tag: id
             values:
-              false:
-                empty: {}
-              true:
-                - string:
-                    margin: 5
-                    text: "{id}"
-                    foreground: 000000ff
-                    deco:
-                      background:
-                        color: ddb071ff
-                - string:
-                    margin: 5
-                    text: "{state}"
-                    deco:
-                      underline:
-                        size: 2
-                        color: ddb071ff
+              1:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: ﳐ
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 1
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: ﳐ
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 1
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: ﳐ
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 1
 
+              2:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 2
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 2
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 2
+              3:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 4
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 4
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 4
+              4:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 8
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 8
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 8
+              5:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 16
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 16
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 16
+              6:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 32
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 32
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 32
+              7:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 64
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 64
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 64
+              8:
+                map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text: 
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 128
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 128
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text: 
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 128
+              9:
+                 map:
+                  tag: state
+                  values:
+                    focused:
+                      string:
+                        text:  
+                        right-margin: 13
+                        left-margin: 10
+                        on-click: riverctl set-focused-tags 256
+                        deco: *bg_tit
+                    invisible:
+                      map:
+                        tag: occupied
+                        values:
+                          true:
+                            string:
+                              text:  
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 256
+                              deco: *bg_tot
+                          false:
+                            string:
+                              text:  
+                              right-margin: 13
+                              left-margin: 10
+                              on-click: riverctl set-focused-tags 256
   center:
     - river:
         title:
@@ -50,6 +312,25 @@ bar:
             max: 80
         content:
           empty: {}
+    - label:
+        content:
+          string:
+            text: "｜"
+        
+    - script:
+        path: /home/uncomfy/.config/yambar/get_media.sh
+        content:
+          string:
+            font: Hasklug Nerd Font:pixelsize=20
+            text: "{status}"
+            left-margin: 5
+            right-margin: 5
+            on-click: 
+              left: /home/uncomfy/.config/yambar/play_pause_media.sh
+              right: flatpak run com.spotify.Client
+              wheel-up: playerctl -p spotify previous
+              wheel-down: playerctl -p spotify next
+
   right:
     - backlight:
         name: intel_backlight
@@ -233,3 +514,17 @@ bar:
                       - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
                       - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
                 - string: {text: " {capacity}%", foreground: ffffffff, deco: *bg_bat}
+    - clock:
+        time-format: "%H:%M %Z"
+        content:
+          - string:
+              text: " {date}"
+              right-margin: 5
+              left-margin: 5
+              foreground: 000000ff
+
+          - string:
+              right-margin: 5
+              left-margin: 5
+              foreground: 000000ff
+              text: " {time}"
