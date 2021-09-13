@@ -1,16 +1,16 @@
 
 # ugh
 
-bg_tit: &bg_tit {stack: [{background: {color: a9b665dd}}, {underline: {size: 2, color: ea6962ff}}]}
+bg_tit: &bg_tit {stack: [{background: {color: f2b3ebdd}}, {underline: {size: 2, color: ea6962ff}}]}
 #bg_tot: &bg_tot {stack: [{background: {color: a9b665dd}}, {underline: {size: 2, color: ea6962ff}}]}
 
 bg_tot: &bg_tot {underline: {size: 2, color: ea6962ff}}
-bg_bat: &bg_bat {stack: [{background: {color: 282828ff}}, {underline: {size: 2, color: d0f27bff}}]}
+bg_bat: &bg_bat {stack: [{background: {color: 28282800}}, {underline: {size: 2, color: 5f8700ff}}]}
 #bg_tit: &bg_tit {stack: [{background: {color: ea696266}}, {underline: {size: 2, color: ea6962ff}}]}
 bar:
   height: 30
   location: top
-  font: Hack Nerd Font:pixelsize=14:style=Bold
+  font: Hack Nerd Font:pixelsize=15:style:Bold
   spacing: 5
   margin: 0
   layer: bottom
@@ -345,7 +345,7 @@ bar:
             foreground: 1d2021ff
             deco:
               background:
-                color: e5da62ff
+                color: e5da6200
             on-click:
               wheel-up: brightnessctl s +1%
               wheel-down: brightnessctl s 1%-
@@ -372,7 +372,7 @@ bar:
                             text: " {name}"
                             deco:
                               background:
-                                color: 7daea3ff
+                                color: 7daea300
                         values:
                           "":
                             string: 
@@ -390,7 +390,7 @@ bar:
           map:
             tag: online
             values:
-              false: {string: {text: , foreground: ff0000ff}}
+              false: {string: {text: , foreground: 444444ff}}
               true:
                 map:
                   on-click:
@@ -405,77 +405,77 @@ bar:
                         foreground: ea6962ff
                         right-margin: 5
                         left-margin: 5
-                        deco:
-                          stack:
-                            - background:
-                                color: 000000ff
-                            - underline:
-                                size: 2
-                                color: ea6962ff
+                        #deco:
+                          #stack:
+                            #- background:
+                                #color: 00000000
+                            #- underline:
+                                #size: 2
+                                #color: ea6962ff
                     false:
                       ramp:
                         tag: volume
                         items:
                           - string:
                               text: " {percent}"
-                              foreground: a9b665ff
+                              foreground: 444444ff
                               right-margin: 5
                               left-margin: 5
-                              deco:
-                                stack:
-                                  - background:
-                                      color: 000000ff
-                                  - underline:
-                                      size: 2
-                                      color: a9b665ff
+                              #deco:
+                                #stack:
+                                  #- background:
+                                      #color: 00000000
+                                  #- underline:
+                                      #size: 2
+                                      #color: a9b665ff
                           - string:
                               text: " {percent}"
-                              foreground: a9b665ff
+                              foreground: 444444ff
                               right-margin: 5
                               left-margin: 5
-                              deco:
-                                stack:
-                                  - background:
-                                      color: 000000ff
-                                  - underline:
-                                      size: 2
-                                      color: a9b665ff
+                              #deco:
+                                #stack:
+                                  #- background:
+                                      #color: 00000000
+                                  #- underline:
+                                      #size: 2
+                                      #color: a9b665ff
                           - string: 
                               text: " {percent}"
-                              foreground: a9b665ff
+                              foreground: 444444ff
                               right-margin: 5
                               left-margin: 5
                               deco:
                                 stack:
                                   - background:
-                                      color: 000000ff
+                                      color: 00000000
                                   - underline:
                                       size: 2
                                       color: a9b665ff
                           - string:
                               text: " {percent}"
-                              foreground: a9b665ff
+                              foreground: 444444ff
                               right-margin: 5
                               left-margin: 5
-                              deco:
-                                stack:
-                                  - background:
-                                      color: 000000ff
-                                  - underline:
-                                      size: 2
-                                      color: a9b665ff
+                              #deco:
+                                #stack:
+                                  #- background:
+                                      #color: 00000000
+                                  #- underline:
+                                      #size: 2
+                                      #color: a9b665ff
                           - string:
                               text: " {percent}"
-                              foreground: a9b665ff
+                              foreground: 444444ff
                               right-margin: 5
                               left-margin: 5
-                              deco:
-                                stack:
-                                  - background:
-                                      color: 000000ff
-                                  - underline:
-                                      size: 2
-                                      color: a9b665ff
+                              #deco:
+                                #stack:
+                                  #- background:
+                                      #color: 00000000
+                                  #- underline:
+                                      #size: 2
+                                      #color: a9b665ff
     - battery:
         name: BAT1
         poll-interval: 30
@@ -487,35 +487,35 @@ bar:
                 - ramp:
                     tag: capacity
                     items:
-                      - string: {text: " ", foreground: ff0000ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: ffa600ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                      - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
-                - string: {text: "{capacity}% {estimate}", deco: *bg_bat, foreground: ffffffff, right-margin: 5, left-margin: 5}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                      - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                - string: {text: "{capacity}% {estimate}", deco: *bg_bat, foreground: 444444ff, right-margin: 5, left-margin: 5}
               charging:
-                - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
                 - string: {text: " {capacity}% {estimate}", right-margin: 5, deco: *bg_bat}
               full:
-                - string: {text: " ", foreground: 00ff00ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
+                - string: {text: " ", foreground: 444444ff, left-margin: 5, right-margin: 5, deco: *bg_bat}
               not charging:
                 - ramp:
                     tag: capacity
                     items:
-                      - string: {text:  , foreground: ff0000ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: ffa600ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
-                      - string: {text:  , foreground: 00ff00ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
+                      - string: {text:  , foreground: 444444ff, left-margin: 5, right-margin: 5}
                 - string: {text: "{capacity}%", foreground: ffffffff, deco: *bg_bat}
     - clock:
         time-format: "%H:%M:%S %Z"

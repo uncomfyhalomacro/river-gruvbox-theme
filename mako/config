@@ -1,33 +1,22 @@
-font=JetBrainsMono Nerd Font 10
+font=Hack Nerd Font 10
 default-timeout=5000
 layer=overlay
 anchor=top-right
-width=300
+width=310
 height=110
 border-radius=4
 border-size=2
-max-icon-size=64
+max-icon-size=128
+text-alignment=center
+background-color=#eeeeee
+text-color=#444444
 
 [urgency=low]
-text-color=#1d2021
-border-color=#d4be98
-background-color=#d4be98
+border-color=#444444
 
 [urgency=normal]
-text-color=#1d2021
-border-color=#f1fa8c
-background-color=#d4be98
+border-color=#764e37
 
 [urgency=high]
-text-color=#1d2021
 border-color=#ea6962
-background-color=#d4be98
 
-[app-name="Spotify"]
-background-color=#d4be98
-text-color=#1d2021
-border-color=#00f74e
-
-[app-name="Firefox"]
-background-color=#d4be98
-border-color=#ff796c

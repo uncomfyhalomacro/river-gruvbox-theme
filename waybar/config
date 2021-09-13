@@ -19,8 +19,7 @@
 
     "custom/title": {
         "format": "{}",
-        "exec": "$HOME/.config/waybar/get_title.sh",
-        "interval": 1,
+        "exec": "echo \"{}\"| ristate -vt -t -w | jq '.title' -r --unbuffered",
 	    "min-length": 3,
 	    "max-length": 120
     },

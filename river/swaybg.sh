@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ -f /usr/bin/swaybg ]]; then
-	swaybg -m fill -i $HOME/.config/river/cat.png
-fi
+killall -q swaybg
+while pgrep -x swaybg >/dev/null; do sleep 1; done
+exec swaybg -m fill -i $HOME/.config/river/background.png
