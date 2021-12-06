@@ -26,5 +26,6 @@ done | uniq | sort | fzf -e -i --prompt='launch: ' | read -r cmd
 
 [ -z "${cmd}" ] && exit
 
-riverctl spawn "source ~/.bashrc; ${cmd}"
+setsid /bin/sh -c "${cmd}" >&/dev/null &
+sleep 0.3
 

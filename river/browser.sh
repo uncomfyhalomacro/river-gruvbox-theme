@@ -19,6 +19,7 @@ sites=(
     "social       facebook            https://fb.me"
     "personal     archwiki            https://wiki.archlinux.org"
     "personal     openSUSE            https://opensuse.github.io/openSUSE-docs-revamped-temp"
+    "personal     odysee              https://odysee.com"
 )
 
 shopt -s lastpipe
@@ -26,7 +27,7 @@ shopt -s lastpipe
 for site in "${sites[@]}"
 do
     echo "${site}" | awk '{print $2}'
-done | fzf -d' ' -e -i --prompt="site: " | read -r name 
+done | sort | fzf -d' ' -e -i --prompt="site: " | read -r name 
 
 [ -z "${name}" ] && exit 1 
 

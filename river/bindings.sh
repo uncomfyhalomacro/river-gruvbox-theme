@@ -7,19 +7,19 @@
 mod="Mod4"
 
 # Set your terminal emulator - foot
-term=$HOME/.local/bin/footclient
+term=footclient
 
 # LOCK ME UP  HERE TOO BUT BE ACTIVE
 riverctl map normal $mod "equal" spawn 'swaylock -f -i $HOME/.config/river/backgrounds/background.jpg'
-riverctl map normal $mod I spawn "$HOME/.local/bin/foot -T 'Firefox Profiles' -c $HOME/.config/foot/foot-thicc.ini -w '350x200' -a firefoxprofile $HOME/.config/river/firefox.sh"
+riverctl map normal $mod I spawn "foot -T 'Firefox Profiles' -c $HOME/.config/foot/foot-thicc.ini -w '350x200' -a firefoxprofile $HOME/.config/river/firefox.sh"
 riverctl map normal $mod O spawn "chromium --enable-features=UseOzonePlatform --ozone-platform=wayland"
-riverctl map normal "Mod1" "space" spawn "$HOME/.local/bin/foot -T 'Desktop Launcher' -c $HOME/.config/foot/foot-thicc.ini -w '500x800' -a desktops $HOME/.config/river/desktop.sh foot"
-riverctl map normal $mod U spawn "$HOME/.local/bin/foot -T 'Open Site' -c $HOME/.config/foot/foot-thicc.ini -w '300x300' -a desktops $HOME/.config/river/browser.sh"
-riverctl map normal $mod+Shift U spawn "$HOME/.local/bin/foot -T 'Launcher' -c $HOME/.config/foot/foot-thicc.ini -w '200x400' -a launcher $HOME/.config/river/launcher.sh"
-riverctl map normal $mod T spawn "$HOME/.local/bin/foot -f 'JuliaMono:size=7, Hack Nerd Font:size=7, Monofur Nerd Font:size=7, Noto Color Emoji:size=7' -a erudite $HOME/.config/river/erudite.sh"
-riverctl map normal $mod "slash" spawn "$HOME/.local/bin/foot -T 'Library' -c $HOME/.config/foot/foot-thicc.ini -w '1200x600' -f 'JuliaMono:size=6, Hack Nerd Font:size=8, Monofur Nerd Font:size=8, Noto Color Emoji:size=8' -a library $HOME/.config/river/book.sh"
+riverctl map normal "Mod1" "space" spawn "foot -T 'Desktop Launcher' -c $HOME/.config/foot/foot-thicc.ini -w '500x800' -a desktops $HOME/.config/river/desktop.sh foot"
+riverctl map normal $mod U spawn "foot -T 'Open Site' -c $HOME/.config/foot/foot-thicc.ini -w '300x300' -a desktops $HOME/.config/river/browser.sh"
+riverctl map normal $mod+Shift U spawn "foot -T 'Launcher' -c $HOME/.config/foot/foot-thicc.ini -w '200x400' -a launcher $HOME/.config/river/launcher.sh"
+riverctl map normal $mod T spawn "foot -f 'JuliaMono:size=7, Hack Nerd Font:size=7, Monofur Nerd Font:size=7, Noto Color Emoji:size=7' -a erudite $HOME/.config/river/erudite.sh"
+riverctl map normal $mod "slash" spawn "foot -T 'Library' -c $HOME/.config/foot/foot-thicc.ini -w '1200x600' -f 'JuliaMono:size=6, Hack Nerd Font:size=8, Monofur Nerd Font:size=8, Noto Color Emoji:size=8' -a library $HOME/.config/river/book.sh"
 
-riverctl map normal $mod C spawn "$HOME/.local/bin/foot -T 'Clipboard Manager' -c $HOME/.config/foot/foot-thicc.ini -w '700x400' -a clipfoot $HOME/.config/river/clipboardmanager.sh"
+riverctl map normal $mod C spawn "foot -T 'Clipboard Manager' -c $HOME/.config/foot/foot-thicc.ini -w '700x400' -a clipfoot $HOME/.config/river/clipboardmanager.sh"
 riverctl map normal $mod "bracketright" spawn "$HOME/.local/bin/colorpicker.sh"
 # Screenshot scripts
 riverctl map normal "None" Print spawn $HOME/.local/bin/mygrimshot.sh
@@ -28,6 +28,9 @@ riverctl map normal "$mod" Print spawn '$HOME/.local/bin/mygrimshot.sh area'
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal $mod+Shift Return spawn $term
 
+riverctl map normal $mod "backslash" spawn 'wshowkeys -b "#000000" -f "#ffffff" -s "#fcff00" -F "Hack Nerd Font 15" -t 1 -a "bottom" -a "right" -m 50'
+riverctl map normal $mod+Shift "backslash" spawn "pkill wshowkeys"
+    
 #############################
 # Views and Window Controls #
 #############################
@@ -280,7 +283,7 @@ riverctl map normal $mod+Mod1+Shift L resize horizontal 100
 
 # Stacktile
 riverctl default-layout stacktile
-riverctl spawn "$HOME/.local/bin/stacktile --per-tag-config --primary-count 2  --secondary-count 3 --primary-sublayout stack --primary-position left --primary-ratio 0.55 --outer-padding 0 --inner-padding 1 --secondary-sublayout rows --secondary-ratio 0.5 --remainder-sublayout stack" 
+riverctl spawn "stacktile --per-tag-config --primary-count 2  --secondary-count 3 --primary-sublayout stack --primary-position left --primary-ratio 0.55 --outer-padding 0 --inner-padding 1 --secondary-sublayout rows --secondary-ratio 0.5 --remainder-sublayout stack" 
 # River will send the process group of the init executable SIGTERM on exit.
 
 ########

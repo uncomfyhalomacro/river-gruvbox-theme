@@ -3,7 +3,7 @@
 
 shopt -s lastpipe
 source ~/.bashrc
-IFS=$'\n' read -r -d '' -a desktops <<< "$(find /usr/share/applications/ $HOME/.local/share/applications/ $HOME/.local/share/flatpak/exports/share/applications/ $HOME/.var/app/com.valvesoftware.Steam/Desktop -name "*.desktop" 2> /dev/null)"
+IFS=$'\n' read -r -d '' -a desktops <<< "$(find /usr/share/applications /usr/local/share/applications $HOME/.local/share/applications $HOME/.local/share/flatpak/exports/share/applications $HOME/.var/app/com.valvesoftware.Steam/Desktop -name "*.desktop" 2> /dev/null)"
 
 for i in "${desktops[@]}"; do echo "$(cat "${i}" | awk -F: '/^Name=/{sub(/^Name=/, ""); print; exit}')" ; done | sort | uniq | fzf -e -i --prompt='launch: ' | read -r cmd
 for i in "${desktops[@]}"
@@ -15,9 +15,11 @@ do
         [ -z "${Exec}" ] && exit
         if [ "${Terminalorno}" = "true" ]
         then
-            riverctl spawn "source ~/.bashrc; ${1} ${Exec}"
+            setsid /bin/sh -c "${1} ${Exec}" >&/dev/null &
+            sleep 0.3
         else
-            riverctl spawn "source ~/.bashrc; ${Exec}"
+            setsid /bin/sh -c "${Exec}" >&/dev/null &
+            sleep 0.3
         fi
         break
     fi

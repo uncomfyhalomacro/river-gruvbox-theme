@@ -8,4 +8,5 @@ command="firefox -P \"${profile}\""
 
 [ -z "${profile}" ]  && exit
 
-riverctl spawn "${command}"
+setsid /bin/sh -c "${command}" >&/dev/null &
+sleep 0.3
